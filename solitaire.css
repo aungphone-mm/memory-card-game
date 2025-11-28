@@ -9,6 +9,65 @@ body {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     min-height: 100vh;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game-nav {
+    width: 100%;
+    max-width: 1200px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-home {
+    background: white;
+    color: #667eea;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-home:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.nav-games {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.nav-link.active {
+    background: white;
+    color: #667eea;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .container {
@@ -223,6 +282,23 @@ h1 {
 }
 
 @media (max-width: 900px) {
+    .game-nav {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .nav-games {
+        flex-direction: column;
+        width: 100%;
+        gap: 8px;
+    }
+
+    .nav-link, .nav-home {
+        width: 100%;
+        text-align: center;
+    }
+
     h1 {
         font-size: 2em;
     }
