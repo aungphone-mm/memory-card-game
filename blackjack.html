@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackjack - 21</title>
+    <link rel="stylesheet" href="blackjack.css">
+</head>
+<body>
+    <div class="container">
+        <h1>♣️ Blackjack</h1>
+
+        <div class="game-info">
+            <div class="score">
+                <span>Chips: $</span>
+                <span id="chips">1000</span>
+            </div>
+            <div class="score">
+                <span>Bet: $</span>
+                <span id="current-bet">0</span>
+            </div>
+            <div class="score">
+                <span>Wins: </span>
+                <span id="wins">0</span>
+            </div>
+        </div>
+
+        <div class="game-area">
+            <!-- Dealer's Hand -->
+            <div class="hand-section dealer-section">
+                <h2>Dealer's Hand <span id="dealer-score" class="hand-score"></span></h2>
+                <div id="dealer-hand" class="card-hand"></div>
+            </div>
+
+            <!-- Game Messages -->
+            <div id="game-message" class="game-message"></div>
+
+            <!-- Player's Hand -->
+            <div class="hand-section player-section">
+                <h2>Your Hand <span id="player-score" class="hand-score"></span></h2>
+                <div id="player-hand" class="card-hand"></div>
+            </div>
+        </div>
+
+        <!-- Betting Area -->
+        <div id="betting-area" class="betting-area">
+            <h3>Place Your Bet</h3>
+            <div class="chip-selector">
+                <button class="chip-btn" data-value="10">$10</button>
+                <button class="chip-btn" data-value="25">$25</button>
+                <button class="chip-btn" data-value="50">$50</button>
+                <button class="chip-btn" data-value="100">$100</button>
+                <button class="chip-btn" data-value="500">$500</button>
+            </div>
+            <div class="betting-controls">
+                <button id="clear-bet-btn" class="control-btn secondary">Clear</button>
+                <button id="deal-btn" class="control-btn primary" disabled>Deal</button>
+            </div>
+        </div>
+
+        <!-- Game Controls -->
+        <div id="game-controls" class="game-controls" style="display: none;">
+            <button id="hit-btn" class="control-btn primary">Hit</button>
+            <button id="stand-btn" class="control-btn primary">Stand</button>
+            <button id="double-btn" class="control-btn secondary">Double Down</button>
+        </div>
+
+        <!-- New Round Button -->
+        <div id="new-round-area" style="display: none;">
+            <button id="new-round-btn" class="control-btn primary large">New Round</button>
+        </div>
+
+        <div class="back-home">
+            <a href="index.html" class="home-btn">← Back to Games</a>
+        </div>
+    </div>
+
+    <script src="blackjack.js"></script>
+</body>
+</html>
