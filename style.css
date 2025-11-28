@@ -125,6 +125,27 @@ h1 {
     color: #667eea;
 }
 
+.back-home {
+    margin-top: 30px;
+}
+
+.home-btn {
+    display: inline-block;
+    background: white;
+    color: #667eea;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.home-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
 @media (max-width: 600px) {
     h1 {
         font-size: 2em;

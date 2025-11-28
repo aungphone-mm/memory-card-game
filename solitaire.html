@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solitaire - Klondike</title>
+    <link rel="stylesheet" href="solitaire.css">
+</head>
+<body>
+    <div class="container">
+        <h1>♠️ Solitaire</h1>
+
+        <div class="game-info">
+            <div class="score">
+                <span>Moves: </span>
+                <span id="moves">0</span>
+            </div>
+            <div class="score">
+                <span>Time: </span>
+                <span id="timer">0:00</span>
+            </div>
+            <button id="new-game-btn">New Game</button>
+        </div>
+
+        <div class="solitaire-board">
+            <!-- Top area: Stock/Waste and Foundations -->
+            <div class="top-area">
+                <div class="stock-waste">
+                    <div id="stock" class="pile stock-pile"></div>
+                    <div id="waste" class="pile waste-pile"></div>
+                </div>
+                <div class="foundations">
+                    <div id="foundation-0" class="pile foundation" data-suit="hearts">
+                        <div class="suit-icon">♥</div>
+                    </div>
+                    <div id="foundation-1" class="pile foundation" data-suit="diamonds">
+                        <div class="suit-icon">♦</div>
+                    </div>
+                    <div id="foundation-2" class="pile foundation" data-suit="clubs">
+                        <div class="suit-icon">♣</div>
+                    </div>
+                    <div id="foundation-3" class="pile foundation" data-suit="spades">
+                        <div class="suit-icon">♠</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tableau (7 columns) -->
+            <div class="tableau">
+                <div id="tableau-0" class="pile tableau-pile"></div>
+                <div id="tableau-1" class="pile tableau-pile"></div>
+                <div id="tableau-2" class="pile tableau-pile"></div>
+                <div id="tableau-3" class="pile tableau-pile"></div>
+                <div id="tableau-4" class="pile tableau-pile"></div>
+                <div id="tableau-5" class="pile tableau-pile"></div>
+                <div id="tableau-6" class="pile tableau-pile"></div>
+            </div>
+        </div>
+
+        <div class="back-home">
+            <a href="index.html" class="home-btn">← Back to Games</a>
+        </div>
+    </div>
+
+    <script src="solitaire.js"></script>
+</body>
+</html>
